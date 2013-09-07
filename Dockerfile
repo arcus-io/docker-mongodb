@@ -8,5 +8,4 @@ RUN (cd /tmp && tar zxf pkg.tar.gz && mv mongodb-* /opt/mongodb)
 RUN rm -rf /tmp/*
 EXPOSE 27017
 EXPOSE 28017
-ENTRYPOINT ["/opt/mongodb/bin/mongod"]
-CMD ["--rest"]
+CMD ["/opt/mongodb/bin/mongod", "--rest"]
